@@ -42,18 +42,18 @@ RCA Copilot detects operational anomalies, generates AI root-cause analysis, est
 
 # 🧱 Architecture
 
-Operational Metrics
-↓
-Anomaly Detection Engine
-↓
-Incident Classification
-↓
-Local LLM Inference (Ollama)
-↓
-AI Root Cause Analysis
-↓
-Business Impact Estimation
-↓
+Operational Metrics  
+↓  
+Anomaly Detection Engine  
+↓  
+Incident Classification  
+↓  
+Local LLM Inference (Ollama)  
+↓  
+AI Root Cause Analysis  
+↓  
+Business Impact Estimation  
+↓  
 Incident Postmortem Report
 
 ---
@@ -85,7 +85,7 @@ Incident Postmortem Report
 ## Clone repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/N-JrP/rca-copilot
 cd rca-copilot
 ```
 
