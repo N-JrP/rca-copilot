@@ -10,26 +10,27 @@ router = APIRouter()
 
 @router.get("/rca")
 def get_root_cause_analysis():
-
     df = generate_incident_data()
     df = detect_anomalies(df)
 
     result = generate_root_cause_analysis(df)
 
-    return result
+    return {
+        "incident_summary": result["incident_summary"],
+        "ai_analysis": str(result["ai_analysis"])
+    }
 
 
 @router.get("/report")
 def get_incident_report():
-
     df = generate_incident_data()
     df = detect_anomalies(df)
 
     rca_result = generate_root_cause_analysis(df)
 
     report = generate_incident_report(
-        ai_analysis=rca_result["ai_analysis"],
-        incident_summary=rca_result["incident_summary"]
+        ai_analysis=str(rca_result["ai_analysis"]),
+        incident_summary=str(rca_result["incident_summary"])
     )
 
     return report
